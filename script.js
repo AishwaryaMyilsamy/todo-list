@@ -14,3 +14,10 @@ document.getElementById('taskList').addEventListener('click', function(e) {
         e.target.classList.toggle('completed');
     }
 });
+document.getElementById('taskList').addEventListener('click', function(e) {
+    if (e.target.tagName === 'LI') {
+        if (confirm('Do you want to delete this task?')) {
+            e.target.remove();
+        }
+    }
+});
