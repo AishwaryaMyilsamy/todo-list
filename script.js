@@ -9,3 +9,8 @@ document.getElementById('addTaskBtn').addEventListener('click', function() {
         taskInput.value = '';
     }
 });
+document.getElementById('taskList').addEventListener('click', function(e) {
+    if (e.target.tagName === 'LI') {
+        e.target.classList.toggle('completed');
+    }
+});
